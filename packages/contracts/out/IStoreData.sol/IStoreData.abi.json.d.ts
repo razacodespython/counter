@@ -1,840 +1,840 @@
 declare const abi: [
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "storeVersion",
-        "type": "bytes32"
-      }
-    ],
-    "name": "HelloStore",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "Store_DeleteRecord",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes",
-        "name": "staticData",
-        "type": "bytes"
-      },
-      {
-        "indexed": false,
-        "internalType": "PackedCounter",
-        "name": "encodedLengths",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes",
-        "name": "dynamicData",
-        "type": "bytes"
-      }
-    ],
-    "name": "Store_SetRecord",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint48",
-        "name": "start",
-        "type": "uint48"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint40",
-        "name": "deleteCount",
-        "type": "uint40"
-      },
-      {
-        "indexed": false,
-        "internalType": "PackedCounter",
-        "name": "encodedLengths",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "name": "Store_SpliceDynamicData",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint48",
-        "name": "start",
-        "type": "uint48"
-      },
-      {
-        "indexed": false,
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "name": "Store_SpliceStaticData",
-    "type": "event"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      }
-    ],
+    "type": "function",
     "name": "deleteRecord",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "dynamicFieldIndex",
-        "type": "uint8"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       }
     ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "getDynamicField",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "dynamicFieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "getDynamicFieldLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "dynamicFieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint256",
-        "name": "start",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "end",
-        "type": "uint256"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "getDynamicFieldSlice",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getField",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      }
-    ],
-    "name": "getField",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getFieldLayout",
-    "outputs": [
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getFieldLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      }
-    ],
-    "name": "getFieldLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getKeySchema",
-    "outputs": [
-      {
-        "internalType": "Schema",
-        "name": "keySchema",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getRecord",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "staticData",
-        "type": "bytes"
-      },
-      {
-        "internalType": "PackedCounter",
-        "name": "encodedLengths",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes",
-        "name": "dynamicData",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      }
-    ],
-    "name": "getRecord",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "staticData",
-        "type": "bytes"
-      },
-      {
-        "internalType": "PackedCounter",
-        "name": "encodedLengths",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes",
-        "name": "dynamicData",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getStaticField",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getValueSchema",
-    "outputs": [
-      {
-        "internalType": "Schema",
-        "name": "valueSchema",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
         "name": "dynamicFieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       },
       {
-        "internalType": "uint256",
-        "name": "byteLengthToPop",
-        "type": "uint256"
-      }
-    ],
-    "name": "popFromDynamicField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "dynamicFieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "bytes",
-        "name": "dataToPush",
-        "type": "bytes"
-      }
-    ],
-    "name": "pushToDynamicField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "dynamicFieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "name": "setDynamicField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "name": "setField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "setField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "bytes",
-        "name": "staticData",
-        "type": "bytes"
-      },
-      {
-        "internalType": "PackedCounter",
-        "name": "encodedLengths",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes",
-        "name": "dynamicData",
-        "type": "bytes"
-      }
-    ],
-    "name": "setRecord",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
-    "name": "setStaticField",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "dynamicFieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint40",
-        "name": "startWithinField",
-        "type": "uint40"
-      },
-      {
-        "internalType": "uint40",
-        "name": "deleteCount",
-        "type": "uint40"
-      },
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "name": "spliceDynamicData",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint48",
         "name": "start",
-        "type": "uint48"
+        "type": "uint256",
+        "internalType": "uint256"
       },
       {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
+        "name": "end",
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "spliceStaticData",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "storeVersion",
     "outputs": [
       {
-        "internalType": "bytes32",
-        "name": "version",
-        "type": "bytes32"
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFieldLayout",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFieldLength",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getFieldLength",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getKeySchema",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "keySchema",
+        "type": "bytes32",
+        "internalType": "Schema"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRecord",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "staticData",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "encodedLengths",
+        "type": "bytes32",
+        "internalType": "PackedCounter"
+      },
+      {
+        "name": "dynamicData",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getRecord",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "staticData",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "encodedLengths",
+        "type": "bytes32",
+        "internalType": "PackedCounter"
+      },
+      {
+        "name": "dynamicData",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getStaticField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getValueSchema",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "valueSchema",
+        "type": "bytes32",
+        "internalType": "Schema"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "popFromDynamicField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "dynamicFieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "byteLengthToPop",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "pushToDynamicField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "dynamicFieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "dataToPush",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setDynamicField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "dynamicFieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setRecord",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "staticData",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "encodedLengths",
+        "type": "bytes32",
+        "internalType": "PackedCounter"
+      },
+      {
+        "name": "dynamicData",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "setStaticField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "spliceDynamicData",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "dynamicFieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "startWithinField",
+        "type": "uint40",
+        "internalType": "uint40"
+      },
+      {
+        "name": "deleteCount",
+        "type": "uint40",
+        "internalType": "uint40"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "spliceStaticData",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "start",
+        "type": "uint48",
+        "internalType": "uint48"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "storeVersion",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "version",
+        "type": "bytes32",
+        "internalType": "bytes32"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "event",
+    "name": "HelloStore",
+    "inputs": [
+      {
+        "name": "storeVersion",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "bytes32"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Store_DeleteRecord",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "indexed": false,
+        "internalType": "bytes32[]"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Store_SetRecord",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "indexed": false,
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "staticData",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      },
+      {
+        "name": "encodedLengths",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "PackedCounter"
+      },
+      {
+        "name": "dynamicData",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Store_SpliceDynamicData",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "indexed": false,
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "start",
+        "type": "uint48",
+        "indexed": false,
+        "internalType": "uint48"
+      },
+      {
+        "name": "deleteCount",
+        "type": "uint40",
+        "indexed": false,
+        "internalType": "uint40"
+      },
+      {
+        "name": "encodedLengths",
+        "type": "bytes32",
+        "indexed": false,
+        "internalType": "PackedCounter"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
+  },
+  {
+    "type": "event",
+    "name": "Store_SpliceStaticData",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "indexed": true,
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "indexed": false,
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "start",
+        "type": "uint48",
+        "indexed": false,
+        "internalType": "uint48"
+      },
+      {
+        "name": "data",
+        "type": "bytes",
+        "indexed": false,
+        "internalType": "bytes"
+      }
+    ],
+    "anonymous": false
   }
 ]; export default abi;

@@ -1,69 +1,69 @@
 declare const abi: [
   {
+    "type": "function",
+    "name": "batchCall",
     "inputs": [
       {
+        "name": "systemCalls",
+        "type": "tuple[]",
+        "internalType": "struct SystemCallData[]",
         "components": [
           {
-            "internalType": "ResourceId",
             "name": "systemId",
-            "type": "bytes32"
+            "type": "bytes32",
+            "internalType": "ResourceId"
           },
           {
-            "internalType": "bytes",
             "name": "callData",
-            "type": "bytes"
+            "type": "bytes",
+            "internalType": "bytes"
           }
-        ],
-        "internalType": "struct SystemCallData[]",
-        "name": "systemCalls",
-        "type": "tuple[]"
+        ]
       }
     ],
-    "name": "batchCall",
     "outputs": [
       {
-        "internalType": "bytes[]",
         "name": "returnDatas",
-        "type": "bytes[]"
+        "type": "bytes[]",
+        "internalType": "bytes[]"
       }
     ],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
+    "type": "function",
+    "name": "batchCallFrom",
     "inputs": [
       {
+        "name": "systemCalls",
+        "type": "tuple[]",
+        "internalType": "struct SystemCallFromData[]",
         "components": [
           {
-            "internalType": "address",
             "name": "from",
-            "type": "address"
+            "type": "address",
+            "internalType": "address"
           },
           {
-            "internalType": "ResourceId",
             "name": "systemId",
-            "type": "bytes32"
+            "type": "bytes32",
+            "internalType": "ResourceId"
           },
           {
-            "internalType": "bytes",
             "name": "callData",
-            "type": "bytes"
+            "type": "bytes",
+            "internalType": "bytes"
           }
-        ],
-        "internalType": "struct SystemCallFromData[]",
-        "name": "systemCalls",
-        "type": "tuple[]"
+        ]
       }
     ],
-    "name": "batchCallFrom",
     "outputs": [
       {
-        "internalType": "bytes[]",
         "name": "returnDatas",
-        "type": "bytes[]"
+        "type": "bytes[]",
+        "internalType": "bytes[]"
       }
     ],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   }
 ]; export default abi;

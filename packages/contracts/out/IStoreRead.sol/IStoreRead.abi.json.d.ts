@@ -1,389 +1,389 @@
 declare const abi: [
   {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "dynamicFieldIndex",
-        "type": "uint8"
-      }
-    ],
+    "type": "function",
     "name": "getDynamicField",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "dynamicFieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "getDynamicFieldLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "dynamicFieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint256",
-        "name": "start",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "end",
-        "type": "uint256"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
     "name": "getDynamicFieldSlice",
-    "outputs": [
-      {
-        "internalType": "bytes",
-        "name": "data",
-        "type": "bytes"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
+        "name": "dynamicFieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "start",
+        "type": "uint256",
+        "internalType": "uint256"
+      },
+      {
+        "name": "end",
+        "type": "uint256",
+        "internalType": "uint256"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "data",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getField",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
         "name": "fieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       },
       {
-        "internalType": "FieldLayout",
         "name": "fieldLayout",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "FieldLayout"
       }
     ],
-    "name": "getField",
     "outputs": [
       {
-        "internalType": "bytes",
         "name": "data",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getField",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "fieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
-    "name": "getField",
     "outputs": [
       {
-        "internalType": "bytes",
         "name": "data",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      }
-    ],
+    "type": "function",
     "name": "getFieldLayout",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
     "outputs": [
       {
-        "internalType": "FieldLayout",
         "name": "fieldLayout",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "FieldLayout"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getFieldLength",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "fieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       },
       {
-        "internalType": "FieldLayout",
         "name": "fieldLayout",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "FieldLayout"
       }
     ],
-    "name": "getFieldLength",
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getFieldLength",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "uint8",
         "name": "fieldIndex",
-        "type": "uint8"
+        "type": "uint8",
+        "internalType": "uint8"
       }
     ],
-    "name": "getFieldLength",
     "outputs": [
       {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      }
-    ],
+    "type": "function",
     "name": "getKeySchema",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
     "outputs": [
       {
-        "internalType": "Schema",
         "name": "keySchema",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "Schema"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getRecord",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       },
       {
-        "internalType": "FieldLayout",
         "name": "fieldLayout",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "FieldLayout"
       }
     ],
-    "name": "getRecord",
     "outputs": [
       {
-        "internalType": "bytes",
         "name": "staticData",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       },
       {
-        "internalType": "PackedCounter",
         "name": "encodedLengths",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "PackedCounter"
       },
       {
-        "internalType": "bytes",
         "name": "dynamicData",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "getRecord",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "bytes32[]",
         "name": "keyTuple",
-        "type": "bytes32[]"
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
       }
     ],
-    "name": "getRecord",
     "outputs": [
       {
-        "internalType": "bytes",
         "name": "staticData",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       },
       {
-        "internalType": "PackedCounter",
         "name": "encodedLengths",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "PackedCounter"
       },
       {
-        "internalType": "bytes",
         "name": "dynamicData",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "tableId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "bytes32[]",
-        "name": "keyTuple",
-        "type": "bytes32[]"
-      },
-      {
-        "internalType": "uint8",
-        "name": "fieldIndex",
-        "type": "uint8"
-      },
-      {
-        "internalType": "FieldLayout",
-        "name": "fieldLayout",
-        "type": "bytes32"
-      }
-    ],
+    "type": "function",
     "name": "getStaticField",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "tableId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "keyTuple",
+        "type": "bytes32[]",
+        "internalType": "bytes32[]"
+      },
+      {
+        "name": "fieldIndex",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "fieldLayout",
+        "type": "bytes32",
+        "internalType": "FieldLayout"
       }
     ],
-    "name": "getValueSchema",
     "outputs": [
       {
-        "internalType": "Schema",
-        "name": "valueSchema",
-        "type": "bytes32"
+        "name": "",
+        "type": "bytes32",
+        "internalType": "bytes32"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
+  },
+  {
+    "type": "function",
+    "name": "getValueSchema",
+    "inputs": [
+      {
+        "name": "tableId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "valueSchema",
+        "type": "bytes32",
+        "internalType": "Schema"
+      }
+    ],
+    "stateMutability": "view"
   }
 ]; export default abi;

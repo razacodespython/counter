@@ -1,56 +1,56 @@
 [
   {
-    "inputs": [
-      {
-        "internalType": "ResourceId",
-        "name": "resourceId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "grantee",
-        "type": "address"
-      }
-    ],
+    "type": "function",
     "name": "grantAccess",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "resourceId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "address",
         "name": "grantee",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    "name": "revokeAccess",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
+    "type": "function",
+    "name": "revokeAccess",
     "inputs": [
       {
-        "internalType": "ResourceId",
-        "name": "namespaceId",
-        "type": "bytes32"
+        "name": "resourceId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "address",
-        "name": "newOwner",
-        "type": "address"
+        "name": "grantee",
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    "name": "transferOwnership",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
+    "name": "transferOwnership",
+    "inputs": [
+      {
+        "name": "namespaceId",
+        "type": "bytes32",
+        "internalType": "ResourceId"
+      },
+      {
+        "name": "newOwner",
+        "type": "address",
+        "internalType": "address"
+      }
+    ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
   }
 ]

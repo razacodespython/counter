@@ -1,13 +1,13 @@
 declare const abi: [
   {
+    "type": "error",
+    "name": "PackedCounter_InvalidLength",
     "inputs": [
       {
-        "internalType": "uint256",
         "name": "length",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
-    ],
-    "name": "PackedCounter_InvalidLength",
-    "type": "error"
+    ]
   }
 ]; export default abi;

@@ -1,28 +1,28 @@
 [
   {
-    "inputs": [],
+    "type": "function",
     "name": "IS_SCRIPT",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "bool",
         "name": "",
-        "type": "bool"
+        "type": "bool",
+        "internalType": "bool"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
+    "type": "function",
+    "name": "run",
     "inputs": [
       {
-        "internalType": "address",
         "name": "worldAddress",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
       }
     ],
-    "name": "run",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   }
 ]

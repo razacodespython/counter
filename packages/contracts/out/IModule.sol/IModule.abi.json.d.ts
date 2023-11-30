@@ -1,86 +1,86 @@
 declare const abi: [
   {
-    "inputs": [],
-    "name": "Module_AlreadyInstalled",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "string",
-        "name": "dependency",
-        "type": "string"
-      }
-    ],
-    "name": "Module_MissingDependency",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "Module_NonRootInstallNotSupported",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "Module_RootInstallNotSupported",
-    "type": "error"
-  },
-  {
-    "inputs": [],
+    "type": "function",
     "name": "getName",
+    "inputs": [],
     "outputs": [
       {
-        "internalType": "bytes16",
         "name": "name",
-        "type": "bytes16"
+        "type": "bytes16",
+        "internalType": "bytes16"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
   },
   {
-    "inputs": [
-      {
-        "internalType": "bytes",
-        "name": "args",
-        "type": "bytes"
-      }
-    ],
+    "type": "function",
     "name": "install",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "bytes",
         "name": "args",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "name": "installRoot",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
+    "type": "function",
+    "name": "installRoot",
     "inputs": [
       {
-        "internalType": "bytes4",
-        "name": "interfaceID",
-        "type": "bytes4"
+        "name": "args",
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
+    "outputs": [],
+    "stateMutability": "nonpayable"
+  },
+  {
+    "type": "function",
     "name": "supportsInterface",
+    "inputs": [
+      {
+        "name": "interfaceID",
+        "type": "bytes4",
+        "internalType": "bytes4"
+      }
+    ],
     "outputs": [
       {
-        "internalType": "bool",
         "name": "",
-        "type": "bool"
+        "type": "bool",
+        "internalType": "bool"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
+    "stateMutability": "view"
+  },
+  {
+    "type": "error",
+    "name": "Module_AlreadyInstalled",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "Module_MissingDependency",
+    "inputs": [
+      {
+        "name": "dependency",
+        "type": "string",
+        "internalType": "string"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "Module_NonRootInstallNotSupported",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "Module_RootInstallNotSupported",
+    "inputs": []
   }
 ]; export default abi;

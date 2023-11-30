@@ -1,20 +1,20 @@
 declare const abi: [
   {
+    "type": "function",
+    "name": "installRootModule",
     "inputs": [
       {
-        "internalType": "contract IModule",
         "name": "module",
-        "type": "address"
+        "type": "address",
+        "internalType": "contract IModule"
       },
       {
-        "internalType": "bytes",
         "name": "args",
-        "type": "bytes"
+        "type": "bytes",
+        "internalType": "bytes"
       }
     ],
-    "name": "installRootModule",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   }
 ]; export default abi;

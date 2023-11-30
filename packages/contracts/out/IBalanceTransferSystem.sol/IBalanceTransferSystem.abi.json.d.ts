@@ -1,48 +1,48 @@
 declare const abi: [
   {
+    "type": "function",
+    "name": "transferBalanceToAddress",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "fromNamespaceId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "address",
         "name": "toAddress",
-        "type": "address"
+        "type": "address",
+        "internalType": "address"
       },
       {
-        "internalType": "uint256",
         "name": "amount",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "transferBalanceToAddress",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   },
   {
+    "type": "function",
+    "name": "transferBalanceToNamespace",
     "inputs": [
       {
-        "internalType": "ResourceId",
         "name": "fromNamespaceId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "ResourceId",
         "name": "toNamespaceId",
-        "type": "bytes32"
+        "type": "bytes32",
+        "internalType": "ResourceId"
       },
       {
-        "internalType": "uint256",
         "name": "amount",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
     ],
-    "name": "transferBalanceToNamespace",
     "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
+    "stateMutability": "nonpayable"
   }
 ]; export default abi;

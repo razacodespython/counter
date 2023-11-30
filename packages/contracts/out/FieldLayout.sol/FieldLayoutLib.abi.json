@@ -1,23 +1,23 @@
 [
   {
+    "type": "error",
+    "name": "FieldLayoutLib_InvalidLength",
     "inputs": [
       {
-        "internalType": "uint256",
         "name": "length",
-        "type": "uint256"
+        "type": "uint256",
+        "internalType": "uint256"
       }
-    ],
-    "name": "FieldLayoutLib_InvalidLength",
-    "type": "error"
+    ]
   },
   {
-    "inputs": [],
+    "type": "error",
     "name": "FieldLayoutLib_StaticLengthDoesNotFitInAWord",
-    "type": "error"
+    "inputs": []
   },
   {
-    "inputs": [],
+    "type": "error",
     "name": "FieldLayoutLib_StaticLengthIsZero",
-    "type": "error"
+    "inputs": []
   }
 ]
