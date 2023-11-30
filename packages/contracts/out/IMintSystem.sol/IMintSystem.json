@@ -1,0 +1,202 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint32",
+          "name": "item",
+          "type": "uint32"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "mint(uint32)": "a71bbebe"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.21+commit.d9974bed\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint32\",\"name\":\"item\",\"type\":\"uint32\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"This interface is automatically generated from the corresponding system contract. Do not edit manually.\",\"kind\":\"dev\",\"methods\":{},\"title\":\"IMintSystem\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/codegen/world/IMintSystem.sol\":\"IMintSystem\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":3000},\"remappings\":[\":@latticexyz/=node_modules/@latticexyz/\",\":ds-test/=node_modules/ds-test/src/\",\":forge-std/=node_modules/forge-std/src/\"]},\"sources\":{\"src/codegen/world/IMintSystem.sol\":{\"keccak256\":\"0x519c5e72b728d03324bcaf98a4142bbae455c6a4ce2faf2a5b19e27435c63e0d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://39afd4122d6fc2c5aa07aa539ab6e011ba3d6cd440a9e722e1c5f57d4e41a2b6\",\"dweb:/ipfs/Qma82n3jrnuk37XoCuYcv9PkHfhjDnS55DTjP2GacbZsGf\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.21+commit.d9974bed"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint32",
+              "name": "item",
+              "type": "uint32"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        "@latticexyz/=node_modules/@latticexyz/",
+        "ds-test/=node_modules/ds-test/src/",
+        "forge-std/=node_modules/forge-std/src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 3000
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/codegen/world/IMintSystem.sol": "IMintSystem"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/codegen/world/IMintSystem.sol": {
+        "keccak256": "0x519c5e72b728d03324bcaf98a4142bbae455c6a4ce2faf2a5b19e27435c63e0d",
+        "urls": [
+          "bzz-raw://39afd4122d6fc2c5aa07aa539ab6e011ba3d6cd440a9e722e1c5f57d4e41a2b6",
+          "dweb:/ipfs/Qma82n3jrnuk37XoCuYcv9PkHfhjDnS55DTjP2GacbZsGf"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/codegen/world/IMintSystem.sol",
+    "id": 86009,
+    "exportedSymbols": {
+      "IMintSystem": [
+        86008
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:283:153",
+    "nodes": [
+      {
+        "id": 86001,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:153",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 86008,
+        "nodeType": "ContractDefinition",
+        "src": "250:64:153",
+        "nodes": [
+          {
+            "id": 86007,
+            "nodeType": "FunctionDefinition",
+            "src": "276:36:153",
+            "nodes": [],
+            "functionSelector": "a71bbebe",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "285:4:153",
+            "parameters": {
+              "id": 86005,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 86004,
+                  "mutability": "mutable",
+                  "name": "item",
+                  "nameLocation": "297:4:153",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 86007,
+                  "src": "290:11:153",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 86003,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "290:6:153",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "289:13:153"
+            },
+            "returnParameters": {
+              "id": 86006,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "311:0:153"
+            },
+            "scope": 86008,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IMintSystem",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 86002,
+          "nodeType": "StructuredDocumentation",
+          "src": "108:141:153",
+          "text": " @title IMintSystem\n @dev This interface is automatically generated from the corresponding system contract. Do not edit manually."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          86008
+        ],
+        "name": "IMintSystem",
+        "nameLocation": "260:11:153",
+        "scope": 86009,
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 153
+}

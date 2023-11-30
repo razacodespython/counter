@@ -1,0 +1,123 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "src/codegen/index.sol",
+    "id": 76263,
+    "exportedSymbols": {
+      "BalanceTaable": [
+        77229
+      ],
+      "BalanceTaableTableId": [
+        76319
+      ],
+      "Counter": [
+        77829
+      ],
+      "CounterTableId": [
+        77286
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:222:147",
+    "nodes": [
+      {
+        "id": 76256,
+        "nodeType": "PragmaDirective",
+        "src": "32:25:147",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.8",
+          ".21"
+        ]
+      },
+      {
+        "id": 76259,
+        "nodeType": "ImportDirective",
+        "src": "108:63:147",
+        "nodes": [],
+        "absolutePath": "src/codegen/tables/Counter.sol",
+        "file": "./tables/Counter.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 76263,
+        "sourceUnit": 77830,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 76257,
+              "name": "Counter",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 77829,
+              "src": "117:7:147",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 76258,
+              "name": "CounterTableId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 77286,
+              "src": "126:14:147",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 76262,
+        "nodeType": "ImportDirective",
+        "src": "172:81:147",
+        "nodes": [],
+        "absolutePath": "src/codegen/tables/BalanceTaable.sol",
+        "file": "./tables/BalanceTaable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 76263,
+        "sourceUnit": 77230,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 76260,
+              "name": "BalanceTaable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 77229,
+              "src": "181:13:147",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          },
+          {
+            "foreign": {
+              "id": 76261,
+              "name": "BalanceTaableTableId",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 76319,
+              "src": "196:20:147",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 147
+}
